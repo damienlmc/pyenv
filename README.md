@@ -55,6 +55,6 @@ brew install python@3.11
         cd $2-data
     fi
 }
-alias pyenv=pyenv```
+alias pyenv=pyenv
 
 
