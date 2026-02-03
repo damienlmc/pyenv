@@ -29,7 +29,7 @@ L’objectif principal est de **réduire plusieurs commandes manuelles à une se
 
 Exemple :
 
-```sh
+
 brew install python@3.11
 
 
