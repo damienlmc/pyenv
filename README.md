@@ -43,16 +43,9 @@ brew install python@3.11
 
 ```function pyenv() {
     if [ "$1" = "" ] || [ "$2" = "" ]; then
-        echo "Usage:
-pyenv [version_python] [nom_venv]
-
-Exemple :
-pyenv 3.11 monenv
-
-Commandes utiles :
-- brew list --versions python
-- brew --prefix python@3.11
-- deactivate (pour quitter la venv)
+        echo "Usage: \n pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew \033[1mpyenv [version de python] [dossier de la venv python] \n
+ \033[0mpour connaitre le chemin utiliser la commande suivante : \033[1mbrew list --versions python \033[0mcela affiche la liste de python installé
+\n et pour avoir le path utiliser la commande \033[1mbrew --prefix [version de python] \n \033[0mPour désactiver la venv utiliser la commande suivante \033[1mdeactivate
 "
     else
         /opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
@@ -62,8 +55,6 @@ Commandes utiles :
         cd $2-data
     fi
 }
-
 alias pyenv=pyenv```
-
 
 
