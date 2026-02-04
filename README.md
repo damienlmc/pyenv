@@ -41,12 +41,15 @@ brew install python@3.11
 
 À ajouter dans ~/.zshrc ou ~/.bashrc :
 
-```function pyenv() {
+```
+function pyenv() {
+    
     if [ "$1" = "" ] || [ "$2" = "" ]; then
-        echo "Usage: \n pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew \033[1mpyenv [version de python] [dossier de la venv python] \n
- \033[0mpour connaitre le chemin utiliser la commande suivante : \033[1mbrew list --versions python \033[0mcela affiche la liste de python installé
-\n et pour avoir le path utiliser la commande \033[1mbrew --prefix [version de python] \n \033[0mPour désactiver la venv utiliser la commande suivante \033[1mdeactivate
-"
+        if [ "$1" = "-a" ] || [ "$1" = "-d"  ] || [ "$1" = "-h" ] || [ "$1" = "-l" ]; then else
+                echo "Usage: \n pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew pyenv [version de python] [dossier de la venv python] \n
+        Pour avoir le path utiliser la commande brew --prefix [version de python]
+        "
+        fi
     else
         /opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
         source ~/$2/bin/activate
@@ -54,7 +57,22 @@ brew install python@3.11
         mkdir $2-data
         cd $2-data
     fi
+    if [ "$1" = "-a" ]; then
+        source ./bin/activate
+        cd *-data
+    fi
+    if [ "$1" = "-d" ]; then
+        deactivate
+        cd
+    fi
+    if [ "$1" = "-l" ]; then
+       brew list | grep python@
+    fi
+    if [ "$1" = "-h" ]; then
+       echo "\n -a Pour activer la venv
+             \n -d Pour désactiver la venv
+             \n -l Pour lister les versions de python disponible"
+    fi
 }
 alias pyenv=pyenv
-
 
