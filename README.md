@@ -57,7 +57,6 @@ elif [ "$1" = "-l" ]; then
   brew list | grep python@ 
 elif [ -z "$1" ] || [ -z "$2" ]; then
   echo "Usage: pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew pyenv [version de python] [dossier de la venv python]"
-  echo "Pour avoir le path utiliser la commande brew --prefix [version de python]"
 else
   /opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
   source ~/$2/bin/activate
