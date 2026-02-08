@@ -58,39 +58,14 @@ elif [ "$1" = "-l" ]; then
 elif [ -z "$1" ] || [ -z "$2" ]; then
   echo "Usage: pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew pyenv [version de python] [dossier de la venv python]"
 else
-  /opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
-  source ~/$2/bin/activate
-  cd ~/$2
-  mkdir $2-data
-  cd $2-data
-fi
-}
-alias pyenv=pyenv
-```
-
-
-## Script WINDOWS
-
-À ajouter dans ~/.zshrc ou ~/.bashrc
-
-```
-function pyenv() {
-if [ "$1" = "-a" ]; then
-  source ./bin/activate
-  cd *-data
-elif [ "$1" = "-d" ]; then
-  deactivate
-  cd
-elif [ "$1" = "-h" ]; then
-  echo "-a Pour activer la venv"
-  echo "-d Pour désactiver la venv"
-  echo "-l Pour lister les versions de python disponible"
-elif [ "$1" = "-l" ]; then
-  brew list | grep python@
-elif [ -z "$1" ] || [ -z "$2" ]; then
-  echo "Usage: pyenv est un alias pour créer un environnement avec un dossier de python déja installé avec brew pyenv [version de python] [dossier de la venv python]"
-else
+  
+  ################ Script LINUX ################
   /home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ~/$2
+  ################ Script WINDOWS WSL #########
+  #/home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ~/$2
+  ################ Script OSX #################
+  #/opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
+
   source ~/$2/bin/activate
   cd ~/$2
   mkdir $2-data
@@ -99,3 +74,5 @@ fi
 }
 alias pyenv=pyenv
 ```
+
+
