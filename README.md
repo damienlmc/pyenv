@@ -33,6 +33,12 @@ Exemple :
 brew install python@3.11
 
 
+## Pour instaler brew 
+
+https://brew.sh/
+
+Après installer ```brew install python@3.10 python@3.11 python@3.12 python@3.13 python@3.14``` 
+
 ## Descriptif de fonctionnement du script
 
 ```pyenv [version_python] [nom_venv]```
