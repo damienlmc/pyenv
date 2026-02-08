@@ -41,8 +41,7 @@ brew install python@3.11
 
 À ajouter dans ~/.zshrc ou ~/.bashrc :
 
-```
-function pyenv() {
+```function pyenv() {
 if [ "$1" = "-a" ]; then
   source ./bin/activate
   cd *-data
@@ -70,8 +69,7 @@ alias pyenv=pyenv
 
 ## Script WINDOWS
 
-```
-function pyenv() {
+```function pyenv() {
 if [ "$1" = "-a" ]; then
   source ./bin/activate
   cd *-data
