@@ -64,7 +64,7 @@ else
   cd $2-data
 fi
 }
-alias pyenv=pyenv
+alias pyenv=pyenv```
 
 
 ## Script WINDOWS
@@ -92,4 +92,4 @@ else
   cd $2-data
 fi
 }
-alias pyenv=pyenv
+alias pyenv=pyenv```
