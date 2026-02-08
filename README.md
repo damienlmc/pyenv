@@ -71,6 +71,8 @@ alias pyenv=pyenv
 
 ## Script WINDOWS
 
+À ajouter dans ~/.zshrc ou ~/.bashrc
+
 ```
 function pyenv() {
 if [ "$1" = "-a" ]; then
