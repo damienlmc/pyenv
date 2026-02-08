@@ -19,7 +19,8 @@ Avec une seule commande, il permet de :
 
 L’objectif principal est de **réduire plusieurs commandes manuelles à une seule commande**.
 
-![pyenv](https://github.com/user-attachments/assets/a08e678d-defc-42c8-b151-70e20a79c479)
+![pyenv](https://github.com/user-attachments/assets/e7522fa0-2dc7-4df7-a858-995e0a9b7478)
+
 
 ---
 
