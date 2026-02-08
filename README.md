@@ -23,7 +23,7 @@ L’objectif principal est de **réduire plusieurs commandes manuelles à une se
 
 ## 📦 Prérequis
 
-- macOS
+- macOS Windows et Linux
 - Homebrew installé
 - Python installé via Homebrew
 
@@ -37,7 +37,7 @@ brew install python@3.11
 
 ```pyenv [version_python] [nom_venv]```
 
-## Script OSX
+## Script
 
 À ajouter dans ~/.zshrc ou ~/.bashrc :
 
