@@ -69,14 +69,14 @@ elif [ -z "$1" ] || [ -z "$2" ]; then
 else
   
   ################ Script LINUX ################
-  /home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ~/$2
+  /home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ./$2
   ################ Script WINDOWS WSL #########
-  #/home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ~/$2
+  #/home/linuxbrew/.linuxbrew/opt/python@$1/bin/python$1 -m venv ./$2
   ################ Script OSX #################
-  #/opt/homebrew/opt/python@$1/bin/python$1 -m venv ~/$2
+  #/opt/homebrew/opt/python@$1/bin/python$1 -m venv ./$2
 
-  source ~/$2/bin/activate
-  cd ~/$2
+  source ./$2/bin/activate
+  cd ./$2
   mkdir $2-data
   cd $2-data
 fi
